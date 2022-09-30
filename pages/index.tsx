@@ -23,7 +23,7 @@ export default function Home() {
       
       {loading && <p>로딩중...</p>}
       <div>
-        {data.countries.map((country: any) => (
+        {data && data.countries.map((country: any) => (
           <div key={country.code}>{country.name}</div>
         ))}
       </div>
