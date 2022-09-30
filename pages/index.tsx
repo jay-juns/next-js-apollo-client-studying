@@ -21,7 +21,7 @@ export default function Home() {
       <div className='nation'>
         {data && data.countries.map((country: any) => (
           <div className={country.name === 'South Korea' ? 'red' : ''} key={country.code}>
-           <p>{country.name}</p>
+           <p>{country.name === 'South Korea' ? '대한민국' : country.name}</p>
            <span>{country.emoji}</span> 
           </div>
         ))}
