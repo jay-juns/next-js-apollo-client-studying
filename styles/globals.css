@@ -22,3 +22,7 @@ p {margin:0}
 .nation > .red {background-color: rgb(192, 38, 38)}
 .nation > div > p { margin-right:8px;font-size:18px}
 .nation > .red > p {font-size:24px;font-weight:700}
+
+@media screen and (max-width:1079px) {
+  .wrapper {padding:0 10px}
+}
