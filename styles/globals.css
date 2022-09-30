@@ -10,17 +10,13 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
+p {margin:0}
 * {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
+.wrapper {width:100%;max-width:1080px;margin:0 auto;display:flex;flex-direction: column;}
+.wrapper > h1 {width:100%;text-align:center;margin-bottom:50px;}
+.nation {display: flex;flex-wrap:wrap;gap:15px 10px}
+.nation > div {display:flex;align-items:center;background-color:rgb(7, 10, 19); color:#fff; padding:5px 10px; font-size:18px;border-radius:4px;box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;font-weight:500}
+.nation > div > p { margin-right:8px}
