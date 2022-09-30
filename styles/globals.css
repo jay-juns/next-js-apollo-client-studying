@@ -19,4 +19,5 @@ p {margin:0}
 .wrapper > h1 {width:100%;text-align:center;margin-bottom:50px;}
 .nation {display: flex;flex-wrap:wrap;gap:15px 10px}
 .nation > div {display:flex;align-items:center;background-color:rgb(7, 10, 19); color:#fff; padding:5px 10px; font-size:18px;border-radius:4px;box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;font-weight:500}
+.nation > .red {background-color: rgb(192, 38, 38)}
 .nation > div > p { margin-right:8px}

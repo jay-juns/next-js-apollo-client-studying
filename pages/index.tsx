@@ -21,7 +21,7 @@ export default function Home() {
       {loading && <p>로딩중...</p>}
       <div className='nation'>
         {data && data.countries.map((country: any) => (
-          <div key={country.code}>
+          <div className={country.name === 'South Korea' ? 'red' : ''} key={country.code}>
            <p>{country.name}</p>
            <span>{country.emoji}</span> 
           </div>
