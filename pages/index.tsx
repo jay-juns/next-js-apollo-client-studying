@@ -13,10 +13,10 @@ export default function Home() {
   return (
     <div className='wrapper'>
       <Head>
-        <title>국가명 GraphQL</title>
+        <title>나라 정보 GraphQL</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <h1>국가명</h1>
+      <h1>나라 정보</h1>
       {loading && <p>로딩중...</p>}
       <div className='nation'>
         {data && data.countries.map((country: any) => (
