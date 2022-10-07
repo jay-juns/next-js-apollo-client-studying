@@ -33,5 +33,5 @@ button {background-color: transparent;border:0;outline: none; cursor: pointer;}
   .is-open-btn> p {font-size:13px}
 }
 @media screen and (max-width: 365px) {
-  .is-open-btn> p {font-size:12px}
+  .is-open-btn> p {font-size:12px;margin-right: 4px}
 }
