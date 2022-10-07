@@ -19,8 +19,10 @@ button {background-color: transparent;border:0;outline: none; cursor: pointer;}
 .wrapper {width:100%;max-width:1080px;margin:0 auto;display:flex;flex-direction: column;}
 .wrapper > h1 {width:100%;text-align:center;margin-bottom:50px;}
 .nation {display: flex;flex-wrap:wrap;gap:15px 10px}
-.is-open-btn {display:flex;width:535px;align-items:center;background-color:rgb(7, 10, 19); color:#fff; padding:5px 10px; font-size:15px;border-radius:4px;box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;font-weight:500;order:2}
-.is-open-btn.red {background-color: rgb(192, 38, 38);order:1}
+.is-open-btn {display:flex;width:535px;align-items:center;background-color:rgba(7, 10, 19, 0.5); color:#fff; padding:5px 10px; font-size:15px;border-radius:4px;box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;font-weight:500;order:2;transition:all ease-in-out .3s}
+.is-open-btn:hover {background-color:rgba(7, 10, 19, 0.8)}
+.is-open-btn.red {background-color: rgba(192, 38, 38, 0.6);order:1}
+.is-open-btn.red:hover {background-color: rgba(192, 38, 38, 1)}
 .is-open-btn > p {margin-right:8px;font-size:18px}
 .is-open-btn.red > p {font-size:24px;font-weight:700}
 @media screen and (max-width:1079px) {
