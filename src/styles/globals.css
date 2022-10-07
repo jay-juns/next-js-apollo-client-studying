@@ -25,7 +25,7 @@ button {background-color: transparent;border:0;outline: none; cursor: pointer;}
 .is-open-btn.red:hover {background-color: rgba(192, 38, 38, 1)}
 .is-open-btn > p {margin-right:8px;font-size:18px}
 .is-open-btn.red > p {font-size:24px;font-weight:700}
-@media screen and (max-width:1079px) {
+@media screen and (max-width:1101px) {
   .wrapper {padding:0 10px}
   .is-open-btn {width:49%}
 }
