@@ -29,3 +29,6 @@ button {background-color: transparent;border:0;outline: none; cursor: pointer;}
   .wrapper {padding:0 10px}
   .is-open-btn {width:48%}
 }
+@media screen and (max-width:767px) {
+  .is-open-btn> p {font-size:13px}
+}
