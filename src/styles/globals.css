@@ -27,5 +27,5 @@ button {background-color: transparent;border:0;outline: none; cursor: pointer;}
 .is-open-btn.red > p {font-size:24px;font-weight:700}
 @media screen and (max-width:1101px) {
   .wrapper {padding:0 10px}
-  .is-open-btn {width:49%}
+  .is-open-btn {width:48%}
 }
