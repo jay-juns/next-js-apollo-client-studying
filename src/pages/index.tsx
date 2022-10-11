@@ -7,18 +7,14 @@ import { Icon } from '@iconify/react';
 
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
-  const [nation, setNation] = useState({});
   const [isCapital, setIsCapital] = useState('');
   const [isNative, setIsNative] = useState('');
   const [isCurrency, setIsCurrency] = useState('');
   const [isNumber, setIsNumber] = useState();
   const { data, loading, error } = useQuery(QUERY_COUNTRIES);
-  // console.log(data, 'data')
-  console.log(nation, 'nation')
 
   const onClickModalOn = (info : any) => {
     setIsActive(true);
-    setNation(info);
     setIsNative(info.native);
     setIsCapital(info.capital);
     setIsNumber(info.phone);
