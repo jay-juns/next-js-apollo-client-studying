@@ -3,15 +3,26 @@ import Head from 'next/head';
 import { useQuery } from '@apollo/client';
 import QUERY_COUNTRIES from './queryCountries.graphql';
 import BasicModal from '../component/modal/basicModal';
+import { Icon } from '@iconify/react';
 
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
-  const [nation, setNation] = useState('');
+  const [nation, setNation] = useState({});
+  const [isCapital, setIsCapital] = useState('');
+  const [isNative, setIsNative] = useState('');
+  const [isCurrency, setIsCurrency] = useState('');
+  const [isNumber, setIsNumber] = useState();
   const { data, loading, error } = useQuery(QUERY_COUNTRIES);
+  // console.log(data, 'data')
+  console.log(nation, 'nation')
 
-  const onClickModalOn = (name : string) => {
+  const onClickModalOn = (info : any) => {
     setIsActive(true);
-    setNation(name)
+    setNation(info);
+    setIsNative(info.native);
+    setIsCapital(info.capital);
+    setIsNumber(info.phone);
+    setIsCurrency(info.currency);
   };
 
   const onClickModalOff = () => {
@@ -34,17 +45,37 @@ export default function Home() {
         <div className='nation'>
             {data && data.countries.map((country: any) => (
             <>
-              <button className={country.name === 'South Korea' ? 'red is-open-btn' : 'is-open-btn'} key={country.code} onClick={()=>onClickModalOn(country.name)}>
+              <button className={country.name === 'South Korea' ? 'red is-open-btn' : 'is-open-btn'} key={country.code} onClick={()=>onClickModalOn(country)}>
                 <p>{country.name === 'South Korea' ? '대한민국' : country.name}</p>
                 <span>{country.emoji}</span> 
+                <p className='small'>{country.capital === 'Seoul' ? '서울' : country.capital}</p>
               </button>
           </>
         ))}
         </div>
         <BasicModal active={isActive} closeEvent={onClickModalOff}>
-          <div>
-            <button onClick={onClickModalOff}>닫기</button>
-            <p>{nation === 'South Korea' ? '대한민국' : nation}</p>
+          <div className='modal-wrap'>
+            <button className='modal-close-btn' onClick={onClickModalOff}>
+              <Icon className="menu" icon="ci:close-big" />  
+            </button>
+            <div>
+              <div className='flex-div'>
+                <p>국가명:</p>
+                <p>{isNative}</p>
+              </div>
+              <div className='flex-div'>
+                <p>수도:</p>
+                <p>{isCapital}</p>
+              </div>
+              <div className='flex-div'>
+                <p>전화번호:</p>
+                <p>{isNumber}</p>
+              </div>
+              <div className='flex-div'>
+                <p>화폐 단위:</p>
+                <p>{isCurrency}</p>
+              </div>
+            </div>
           </div>
         </BasicModal>
     </div>

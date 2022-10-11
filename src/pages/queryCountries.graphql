@@ -3,5 +3,10 @@ query {
         code
         name
         emoji
+        native
+        phone
+        capital
+        currency
+        emojiU
     }
 }
