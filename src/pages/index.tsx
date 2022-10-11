@@ -26,7 +26,7 @@ export default function Home() {
   };
   
   if (error) {
-    return <p>에러! 관리자에게 문의!</p>;
+    return <p>에러! 관리자에게 문의하세요!</p>;
   }
 
   // if all good return data

@@ -26,7 +26,7 @@ button {background-color: transparent;border:0;outline: none; cursor: pointer;}
 .is-open-btn > p {margin-right:8px;font-size:16px}
 .is-open-btn.red > p {font-size:24px;font-weight:700}
 .is-open-btn > .small,
-.is-open-btn.red > .small {font-size:15px;margin-left:4px}
+.is-open-btn.red > .small {font-size:14px;margin-left:4px}
 .flex-div {display:flex; align-items:center}
 .flex-div > p {margin-left:5px}
 .flex-div > p:first-child {margin-left: 0}
