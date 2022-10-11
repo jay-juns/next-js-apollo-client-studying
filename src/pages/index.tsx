@@ -4,11 +4,13 @@ import { useQuery } from '@apollo/client';
 import QUERY_COUNTRIES from './queryCountries.graphql';
 import BasicModal from '../component/modal/basicModal';
 import { Icon } from '@iconify/react';
+import { connected } from 'process';
 
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
   const [isCapital, setIsCapital] = useState('');
   const [isNative, setIsNative] = useState('');
+  const [isName, setIsName] = useState('');
   const [isCurrency, setIsCurrency] = useState('');
   const [isNumber, setIsNumber] = useState();
   const { data, loading, error } = useQuery(QUERY_COUNTRIES);
@@ -18,6 +20,7 @@ export default function Home() {
     setIsNative(info?.native);
     setIsCapital(info?.capital);
     setIsNumber(info?.phone);
+    setIsName(info?.name);
     setIsCurrency(info?.currency);
   };
 
@@ -42,7 +45,7 @@ export default function Home() {
             {data && data.countries.map((country: any) => (
             <>
               <button className={country.name === 'South Korea' ? 'red is-open-btn' : 'is-open-btn'} key={country.code} onClick={()=>onClickModalOn(country)}>
-                <p>{country.name === 'South Korea' ? '대한민국' : country.name}</p>
+                <p>{country.code === 'KR' ? country.native : country.code}</p>
                 <span>{country.emoji}</span> 
                 <p className='small'>{country.capital === 'Seoul' ? '서울' : country.capital}</p>
               </button>
@@ -58,6 +61,7 @@ export default function Home() {
               <div className='flex-div'>
                 <p>국가명:</p>
                 <p>{isNative}</p>
+                <p>{isName}</p>
               </div>
               <div className='flex-div'>
                 <p>수도:</p>

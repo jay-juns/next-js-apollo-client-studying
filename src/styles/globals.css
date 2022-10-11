@@ -27,7 +27,7 @@ button {background-color: transparent;border:0;outline: none; cursor: pointer;}
 .is-open-btn.red > p {font-size:24px;font-weight:700}
 .is-open-btn > .small,
 .is-open-btn.red > .small {font-size:14px;margin-left:4px}
-.flex-div {display:flex; align-items:center}
+.flex-div {display:flex; align-items:center;flex-wrap: wrap}
 .flex-div > p {margin-left:5px}
 .flex-div > p:first-child {margin-left: 0}
 .modal-close-btn {    
@@ -42,7 +42,7 @@ button {background-color: transparent;border:0;outline: none; cursor: pointer;}
   justify-content: center;
 }
 @media screen and (max-width:1101px) {
-  .wrapper {padding:0 10px}
+  .wrapper {padding:10px 10px 50px}
   .is-open-btn {width:48%}
 }
 @media screen and (max-width:767px) {
