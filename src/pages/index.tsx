@@ -15,10 +15,10 @@ export default function Home() {
 
   const onClickModalOn = (info : any) => {
     setIsActive(true);
-    setIsNative(info.native);
-    setIsCapital(info.capital);
-    setIsNumber(info.phone);
-    setIsCurrency(info.currency);
+    setIsNative(info?.native);
+    setIsCapital(info?.capital);
+    setIsNumber(info?.phone);
+    setIsCurrency(info?.currency);
   };
 
   const onClickModalOff = () => {
