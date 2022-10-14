@@ -40,7 +40,7 @@ export default function Home() {
             <link rel='icon' href='/favicon.ico' />
         </Head>
         <Navbar />
-        {loading && <p>로딩중...</p>}
+        {loading && <span className="loader"></span>}
         <div className='nation'>
             {data && data.countries.map((country: any) => (
             <>
