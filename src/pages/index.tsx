@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/client';
 import QUERY_COUNTRIES from './queryCountries.graphql';
 import BasicModal from '../component/modal/basicModal';
 import { Icon } from '@iconify/react';
-import { connected } from 'process';
+import Navbar from '../component/navbar/Navbar';
 
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
@@ -39,7 +39,7 @@ export default function Home() {
             <title>나라 정보 GraphQL</title>
             <link rel='icon' href='/favicon.ico' />
         </Head>
-        <h1>나라 정보</h1>
+        <Navbar />
         {loading && <p>로딩중...</p>}
         <div className='nation'>
             {data && data.countries.map((country: any) => (
