@@ -18,9 +18,11 @@ const Navbar = () => {
     useEffect(() => {
         if (typeof window !== 'undefined') {
             window.addEventListener('scroll', controlNavbar);
+            window.addEventListener('touchmove', controlNavbar);
 
             return () => {
                 window.removeEventListener('scroll', controlNavbar);
+                window.removeEventListener('touchmove', controlNavbar);
             }
         }
     },[lastScrollY])
