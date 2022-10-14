@@ -11,7 +11,7 @@ body {
   margin: 0;
   font-family: "NotoSansKR-Medium", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background: #848484;
+    background: #f6f6f6;
 }
 
 a {
@@ -69,14 +69,14 @@ button,
   width: 48em;
   height: 48em;
   background-image:
-    radial-gradient(circle 10px, #FFF 100%, transparent 0),
-    radial-gradient(circle 10px, #FFF 100%, transparent 0),
-    radial-gradient(circle 10px, #FFF 100%, transparent 0),
-    radial-gradient(circle 10px, #FFF 100%, transparent 0),
-    radial-gradient(circle 10px, #FFF 100%, transparent 0),
-    radial-gradient(circle 10px, #FFF 100%, transparent 0),
-    radial-gradient(circle 10px, #FFF 100%, transparent 0),
-    radial-gradient(circle 10px, #FFF 100%, transparent 0);
+    radial-gradient(circle 10px, #3f3e3e 100%, transparent 0),
+    radial-gradient(circle 10px, #3f3e3e 100%, transparent 0),
+    radial-gradient(circle 10px, #3f3e3e 100%, transparent 0),
+    radial-gradient(circle 10px, #3f3e3e 100%, transparent 0),
+    radial-gradient(circle 10px, #3f3e3e 100%, transparent 0),
+    radial-gradient(circle 10px, #3f3e3e 100%, transparent 0),
+    radial-gradient(circle 10px, #3f3e3e 100%, transparent 0),
+    radial-gradient(circle 10px, #3f3e3e 100%, transparent 0);
   background-position: 0em -18em, 0em 18em, 18em 0em, -18em 0em,
                        13em -13em, -13em -13em, 13em 13em, -13em 13em;
     background-repeat: no-repeat;
@@ -86,7 +86,7 @@ button,
 }
 .loader::after {
   font-size: 1px;
-  background: #fff;
+  background: #3f3e3e;
   animation: bounce 1s ease-in infinite;
 }
 @media screen and (max-width:1101px) {
