@@ -1,8 +1,15 @@
+@font-face {
+  font-family: 'NotoSansKR-Medium';
+  src: url('./fonts/NotoSansKR-Medium.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: "NotoSansKR-Medium", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -17,7 +24,7 @@ p {margin:0}
 button {background-color: transparent;border:0;outline: none; cursor: pointer;}
 
 .wrapper {width:100%;max-width:1080px;margin:0 auto;padding:40px 0 100px;display:flex;flex-direction: column;}
-.wrapper > nav.active {width:100%;height:50px;display:flex;align-items:center;justify-content:center;text-align:center;margin-bottom:50px;background-color:#fff;left:0;top:0;}
+.wrapper > nav.active {width:100%;height:50px;display:flex;align-items:center;justify-content:center;text-align:center;margin-bottom:50px;background-color:#fff;left:0;top:0;box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;}
 .wrapper > nav.active.hidden {position:static}
 .wrapper > nav.active.false {position:fixed}
 .wrapper > nav.active > p {font-size:25px; font-weight:600; color:#000}
