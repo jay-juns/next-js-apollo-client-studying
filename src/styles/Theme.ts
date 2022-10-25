@@ -7,7 +7,9 @@ export const lightTheme = {
     footerBg: '#fdfeff',
     navbarBg: '#0b0c10',
     navText: '#fff',
-    toggleBtnText: '#fce303'
+    toggleBtnText: '#fce303',
+    overlayBg: 'rgba(249, 249, 249, 0.85)',
+    shadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px;'
   }
   
   export const darkTheme = {
@@ -19,7 +21,9 @@ export const lightTheme = {
     footerBg: '#2c2c2c',
     navbarBg: '#fff',
     navText: '#000',
-    toggleBtnText: '#c02626'
+    toggleBtnText: '#c02626',
+    overlayBg: 'rgba(15, 15, 15, 0.85)',
+    shadow: 'rgba(12, 23, 41, 0.2) 0px 8px 24px;'
   }
   
   export const theme = {

@@ -69,7 +69,6 @@ const ModalBaseContainer = styled.div<{ active: boolean }>`
     right: 0;
     bottom: 0;
     z-index: 1;
-    background-color: rgba(249, 249, 249, 0.85);
   }
   .modal_content {
     position: relative;
@@ -79,7 +78,6 @@ const ModalBaseContainer = styled.div<{ active: boolean }>`
     padding: 2rem;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
   @keyframes popInFromBottom {
     0% {
