@@ -5,8 +5,8 @@ export const lightTheme = {
     textActiveOpp: '#fff',
     borderColor: '#ebebeb',
     footerBg: '#fdfeff',
-    navbarBg: '#0b0c10',
-    navText: '#fff',
+    navbarBg: '#fff',
+    navText: '#000',
     toggleBtnText: '#fce303',
     overlayBg: 'rgba(249, 249, 249, 0.85)',
     shadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px;'
@@ -19,8 +19,8 @@ export const lightTheme = {
     textActiveOpp: '#000',
     borderColor: '#111',
     footerBg: '#2c2c2c',
-    navbarBg: '#fff',
-    navText: '#000',
+    navbarBg: '#0b0c10',
+    navText: '#fff',
     toggleBtnText: '#c02626',
     overlayBg: 'rgba(15, 15, 15, 0.85)',
     shadow: 'rgba(12, 23, 41, 0.2) 0px 8px 24px;'
