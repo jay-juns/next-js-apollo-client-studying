@@ -16,11 +16,17 @@ export const GlobalStyles = createGlobalStyle`
   button {
     color: ${({ theme } : {theme: any}) => theme.text};
   }
-  nav.active {
+  nav.active,
+  .modal_content {
     background-color: ${({ theme } : {theme: any}) => theme.navbarBg};
   }
   nav.active > p,
-  nav.active > button {
+  nav.active > button,
+  .flex-div > p,
+  .modal-close-btn {
     color: ${({ theme } : {theme: any}) => theme.navText}
+  }
+  nav.active:hover > button {
+    color: ${({ theme } : {theme: any}) => theme.toggleBtnText}
   }
 `;

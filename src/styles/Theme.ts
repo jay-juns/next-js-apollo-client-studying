@@ -6,7 +6,8 @@ export const lightTheme = {
     borderColor: '#ebebeb',
     footerBg: '#fdfeff',
     navbarBg: '#0b0c10',
-    navText: '#fff'
+    navText: '#fff',
+    toggleBtnText: '#fce303'
   }
   
   export const darkTheme = {
@@ -17,7 +18,8 @@ export const lightTheme = {
     borderColor: '#111',
     footerBg: '#2c2c2c',
     navbarBg: '#fff',
-    navText: '#000'
+    navText: '#000',
+    toggleBtnText: '#c02626'
   }
   
   export const theme = {

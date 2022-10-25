@@ -39,6 +39,26 @@ nav.active > p {font-size:25px; font-weight:600}
 .flex-div {display:flex; align-items:center;flex-wrap: wrap}
 .flex-div > p {margin-left:5px}
 .flex-div > p:first-child {margin-left: 0}
+.toggle-btn {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.toggle-btn > svg {
+  position:absolute;
+  font-size: 24px;
+  transform: translateY(0);
+  transition: all ease-in-out .3s;
+}
+.toggle-btn > svg.sun {
+  transform: translateY(-100px);
+}
+.toggle-btn > svg.moon {
+  transform: translateY(-100px);
+}
 .modal-close-btn {    
   position:absolute;
   right:12px;
