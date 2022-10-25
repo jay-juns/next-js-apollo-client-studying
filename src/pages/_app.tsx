@@ -5,6 +5,8 @@ import { ApolloProvider } from '@apollo/client'
 import { useDarkMode } from '../utils/customHooks/useDarkMode'
 import { GlobalStyles } from '../styles/globalStyles'
 import { lightTheme, darkTheme } from '../styles/Theme'
+import Navbar from '../component/navbar/Navbar'
+import ToggleThemeBtn from '../component/buttons/ToggleThemeBtn'
 import '../styles/globals.css'
 
 const client = new ApolloClient({
@@ -14,13 +16,20 @@ const client = new ApolloClient({
 
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [theme] = useDarkMode();
+  const [theme, toggleTheme, componentMounted] = useDarkMode();
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
+  
+  if (!componentMounted) {
+    return <div />
+  }
 
   return (
     <ApolloProvider client={client}>
       <ThemeProvider theme={themeMode}>
         <GlobalStyles />
+        <Navbar>
+          <ToggleThemeBtn theme={theme} toggleTheme={toggleTheme} />
+        </Navbar>
         <Component {...pageProps} />
       </ThemeProvider>
     </ApolloProvider>

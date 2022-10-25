@@ -16,4 +16,11 @@ export const GlobalStyles = createGlobalStyle`
   button {
     color: ${({ theme } : {theme: any}) => theme.text};
   }
+  nav.active {
+    background-color: ${({ theme } : {theme: any}) => theme.navbarBg};
+  }
+  nav.active > p,
+  nav.active > button {
+    color: ${({ theme } : {theme: any}) => theme.navText}
+  }
 `;
