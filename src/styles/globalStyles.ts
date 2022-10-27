@@ -19,11 +19,11 @@ export const GlobalStyles = createGlobalStyle`
   nav.active {
     background-color: ${({ theme } : {theme: any}) => theme.navbarBg};
   }
-  nav.active > p,
-  nav.active > button {
+  nav.active > .nav-wrap > p,
+  nav.active > .nav-wrap > button {
     color: ${({ theme } : {theme: any}) => theme.navText}
   }
-  nav.active:hover > button {
+  nav.active > .nav-wrap:hover > button {
     color: ${({ theme } : {theme: any}) => theme.toggleBtnText}
   }
   .modal_content {

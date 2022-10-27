@@ -33,8 +33,10 @@ const Navbar = ({ children }:navBaseProps) => {
 
   return (
     <nav className={`active ${show && 'hidden'}`}>
-        <p>나라 정보</p>
-        {children} 
+        <div className='nav-wrap'>
+            <p>나라 정보</p>
+            {children}
+        </div> 
     </nav>
   )
 }
