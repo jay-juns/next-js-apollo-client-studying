@@ -26,13 +26,18 @@ export const GlobalStyles = createGlobalStyle`
   nav.active > .nav-wrap:hover > button {
     color: ${({ theme } : {theme: any}) => theme.toggleBtnText}
   }
+  .is-open-btn {
+    background-color: ${({ theme } : {theme: any}) => theme.textActiveOpp};
+  }
+  .is-open-btn:hover {
+    background-color: ${({ theme } : {theme: any}) => theme.openBtnMouseOver};
+  }
   .modal_content {
     background-color: ${({ theme } : {theme: any}) => theme.textActiveOpp};
     box-shadow: ${({ theme } : {theme: any}) => theme.shadow};
   }
-  .flex-div > p,
-  .modal-close-btn {
-    color: ${({ theme } : {theme: any}) => theme.textActive}
+  .flex-div > p, .is-open-btn > p, .modal-close-btn {
+    color: ${({ theme } : {theme: any}) => theme.textActive};
   }
   .modal_back {
     background-color: ${({ theme } : {theme: any}) => theme.overlayBg}

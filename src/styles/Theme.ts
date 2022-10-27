@@ -9,7 +9,8 @@ export const lightTheme = {
     navText: '#000',
     toggleBtnText: '#fce303',
     overlayBg: 'rgba(249, 249, 249, 0.85)',
-    shadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px;'
+    shadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px;',
+    openBtnMouseOver: 'rgba(217, 210, 219, 0.8)'
   }
   
   export const darkTheme = {
@@ -23,7 +24,8 @@ export const lightTheme = {
     navText: '#fff',
     toggleBtnText: '#c02626',
     overlayBg: 'rgba(15, 15, 15, 0.85)',
-    shadow: 'rgba(12, 23, 41, 0.2) 0px 8px 24px;'
+    shadow: 'rgba(12, 23, 41, 0.2) 0px 8px 24px;',
+    openBtnMouseOver: 'rgba(17, 10, 9, 0.8)'
   }
   
   export const theme = {

@@ -30,11 +30,10 @@ nav.active > .nav-wrap {width:100%; max-width:1080px;margin:0 auto;display:flex;
 nav.active > .nav-wrap > p {font-size:25px; font-weight:600;margin-right:auto;margin-left:auto}
 .nation {display: flex;flex-wrap:wrap;gap:15px 10px}
 .is-open-btn {display:flex;width:535px;align-items:center;background-color:rgba(7, 10, 19, 0.5); color:#fff; padding:5px 10px; font-size:15px;border-radius:4px;box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;font-weight:500;order:2;transition:all ease-in-out .3s}
-.is-open-btn:hover {background-color:rgba(7, 10, 19, 0.8)}
 .is-open-btn.red {background-color: rgba(192, 38, 38, 0.6);order:1}
 .is-open-btn.red:hover {background-color: rgba(192, 38, 38, 1)}
 .is-open-btn > p {margin-right:8px;font-size:16px}
-.is-open-btn.red > p {font-size:24px;font-weight:700}
+.is-open-btn.red > p {font-size:24px;font-weight:700;color:#fff}
 .is-open-btn > .small,
 .is-open-btn.red > .small {font-size:14px;margin-left:4px}
 .flex-div {display:flex; align-items:center;flex-wrap: wrap}
