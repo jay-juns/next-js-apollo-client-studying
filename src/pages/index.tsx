@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { useQuery } from '@apollo/client';
 import QUERY_COUNTRIES from './queryCountries.graphql';
 import BasicModal from '../component/modal/basicModal';
+import Spinner from '../component/spinner/Spinner';
 import { Icon } from '@iconify/react';
 
 export default function Home() {
@@ -39,7 +40,7 @@ export default function Home() {
             <link rel='icon' href='/favicon.ico' />
         </Head>
 
-        {loading && <span className="loader"></span>}
+        {loading && <Spinner />}
         <div className='nation'>
             {data && data.countries.map((country: any) => (
             <>
