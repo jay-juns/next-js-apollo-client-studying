@@ -1,8 +1,7 @@
 import { Icon } from '@iconify/react';
 
 const ToggleThemeBtn= ({ theme, toggleTheme }: {theme:any, toggleTheme:any}) => {
-    const isLight = theme === 'light';
-    console.log(theme, 'theme')
+  const isLight = theme === 'light';
   
   return (
     <button className="toggle-btn" onClick={toggleTheme}>
