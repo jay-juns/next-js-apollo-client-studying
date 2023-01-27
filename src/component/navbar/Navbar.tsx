@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Search from '../search/search';
 
 export type navBaseProps = {
     children: React.ReactNode;
@@ -34,6 +35,7 @@ const Navbar = ({ children }:navBaseProps) => {
   return (
     <nav className={`active ${show && 'hidden'}`}>
         <div className='nav-wrap'>
+            <Search />
             <p>나라 정보</p>
             {children}
         </div> 

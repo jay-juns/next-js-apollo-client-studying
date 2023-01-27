@@ -41,5 +41,8 @@ export const GlobalStyles = createGlobalStyle`
   }
   .modal_back {
     background-color: ${({ theme } : {theme: any}) => theme.overlayBg}
-  } 
+  }
+  .search-bar > span, .search-bar > button {
+    color: ${({ theme } : {theme: any}) => theme.textActive};
+  }
 `;

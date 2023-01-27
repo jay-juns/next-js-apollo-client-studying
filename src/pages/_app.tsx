@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app'
-import { ApolloClient, InMemoryCache } from '@apollo/client'
+import { ApolloClient, InMemoryCache, NormalizedCacheObject } from '@apollo/client'
 import { ThemeProvider } from 'styled-components'
 import { ApolloProvider } from '@apollo/client'
 import { useDarkMode } from '../utils/customHooks/useDarkMode'
@@ -9,7 +9,7 @@ import Navbar from '../component/navbar/Navbar'
 import ToggleThemeBtn from '../component/buttons/ToggleThemeBtn'
 import '../styles/globals.css'
 
-const client = new ApolloClient({
+const client = new ApolloClient<NormalizedCacheObject> ({
   uri: "https://countries.trevorblades.com",
   cache: new InMemoryCache()
 });

@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { useQuery } from '@apollo/client';
-import QUERY_COUNTRIES from './queryCountries.graphql';
+import QUERY_COUNTRIES from './api/queryCountries.graphql';
 import BasicModal from '../component/modal/basicModal';
-import Spinner from '../component/spinner/Spinner';
 import { Icon } from '@iconify/react';
 
 export default function Home() {
@@ -29,7 +28,9 @@ export default function Home() {
   };
   
   if (error) {
-    return <p>에러! 관리자에게 문의하세요!</p>;
+    return <p style={{
+      textAlign: 'center'
+    }}>에러! 관리자에게 문의하세요!</p>;
   }
 
   // if all good return data
@@ -40,16 +41,14 @@ export default function Home() {
             <link rel='icon' href='/favicon.ico' />
         </Head>
 
-        {loading && <Spinner />}
+        {loading && <span className="loader"></span>}
         <div className='nation'>
-            {data && data.countries.map((country: any) => (
-            <>
-              <button className={country.name === 'South Korea' ? 'red is-open-btn' : 'is-open-btn'} key={country.code} onClick={()=>onClickModalOn(country)}>
+            {data && data.countries.map((country: any, index: number) => (
+              <button className={country.name === 'South Korea' ? 'red is-open-btn' : 'is-open-btn'} onClick={()=>onClickModalOn(country)} key={index}>
                 <p>{country.code === 'KR' ? country.native : country.code}</p>
                 <span>{country.emoji}</span> 
                 <p className='small'>{country.capital === 'Seoul' ? '서울' : country.capital}</p>
               </button>
-          </>
         ))}
         </div>
         <BasicModal active={isActive} closeEvent={onClickModalOff}>

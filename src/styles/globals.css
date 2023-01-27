@@ -26,8 +26,8 @@ button,
 nav.active {width:100%;height:50px;display:flex;align-items:center;justify-content:center;text-align:center;margin-bottom:50px;left:0;top:0;box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;transition: 0.3s linear;}
 nav.active.hidden {position:static}
 nav.active.false {position:fixed}
-nav.active > .nav-wrap {width:100%; max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content: center;}
-nav.active > .nav-wrap > p {font-size:25px; font-weight:600;margin-right:auto;margin-left:auto}
+nav.active > .nav-wrap {position:relative;width:100%; max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content: space-between;}
+nav.active > .nav-wrap > p {position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:25px; font-weight:600;margin-right:auto;margin-left:auto}
 .nation {display: flex;flex-wrap:wrap;gap:15px 10px}
 .is-open-btn {display:flex;width:535px;align-items:center;background-color:rgba(7, 10, 19, 0.5); color:#fff; padding:5px 10px; font-size:15px;border-radius:4px;box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;font-weight:500;order:2;transition:all ease-in-out .3s}
 .is-open-btn.red {background-color: rgba(192, 38, 38, 0.6);order:1}

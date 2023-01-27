@@ -1,4 +1,4 @@
-query {
+query CountryInfo {
     countries {
         code
         name
