@@ -6,6 +6,7 @@ const COUNTRIES_SEARCH_QUERY = gql`
         countries(filter: {code: { eq: $code }}) {
             name
             code
+            emojiU
         }
     }
 `;
