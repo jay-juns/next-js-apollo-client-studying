@@ -10,7 +10,7 @@ const COUNTRIES_SEARCH_QUERY = gql`
     }
 `;
 
-const search: Function = () => {
+const search = () => {
     const [searchFilter, setSearchFilter] = useState('');
     const [executeSearch, { data }] = useLazyQuery(
         COUNTRIES_SEARCH_QUERY
