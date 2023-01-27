@@ -11,7 +11,7 @@ const COUNTRIES_SEARCH_QUERY = gql`
     }
 `;
 
-const search = () => {
+const Search = () => {
     const [searchFilter, setSearchFilter] = useState('');
     const [executeSearch, { data }] = useLazyQuery(
         COUNTRIES_SEARCH_QUERY
@@ -49,4 +49,4 @@ const search = () => {
     )
 }
 
-export default search
+export default Search
