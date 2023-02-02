@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
+import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useQuery } from '@apollo/client';
 import QUERY_COUNTRIES from './api/queryCountries.graphql';
 import BasicModal from '../component/modal/basicModal';
 import { Icon } from '@iconify/react';
+import PageWithLayoutType from '../types/pageWithLayoutType';
+import MainLayout from '../component/layouts/Main';
 
-export default function Home() {
+const Home: NextPage = () => {
   const [isActive, setIsActive] = useState(false);
   const [isCapital, setIsCapital] = useState('');
   const [isNative, setIsNative] = useState('');
@@ -79,4 +82,8 @@ export default function Home() {
         </BasicModal>
     </div>
   );
+
 }
+(Home as PageWithLayoutType).layout = MainLayout
+
+export default Home
