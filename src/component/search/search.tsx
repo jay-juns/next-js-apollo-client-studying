@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import type { NextPage } from 'next';
 import { useLazyQuery, gql } from '@apollo/client';
 
 const COUNTRIES_SEARCH_QUERY = gql`
@@ -11,7 +12,7 @@ const COUNTRIES_SEARCH_QUERY = gql`
     }
 `;
 
-const Search = () => {
+const Search: NextPage  = () => {
     const [searchFilter, setSearchFilter] = useState('');
     const [executeSearch, { data }] = useLazyQuery(
         COUNTRIES_SEARCH_QUERY
